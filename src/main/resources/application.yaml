@@ -1,0 +1,62 @@
+spring :
+  profiles :
+    active : dev
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: saurabh.kori.dev@gmail.com
+    password: xkgd uvsn ikht vorh
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    default-encoding: UTF-8
+    from: saurabh.kori.dev@gmail.com
+  redis :
+      uri: rediss://default:hnjwHb2waR2nEotyznjaKazr9SmbAUmO@redis-12194.crce217.ap-south-1-1.ec2.cloud.redislabs.com:12194
+#      host: redis-12194.crce217.ap-south-1-1.ec2.cloud.redislabs.com
+#      port: 12194
+#      username: default
+#      password: hnjwHb2waR2nEotyznjaKazr9SmbAUmO
+      ssl: false
+#    host : localhost
+#    port :  6379
+  kafka:
+    bootstrap-servers: pkc-l7pr2.ap-south-1.aws.confluent.cloud:9092
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+    consumer:
+      group-id: weekly-sentiment-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: com.saurabh.journal.model
+
+    properties:
+      security.protocol: SASL_SSL
+      sasl.mechanism: PLAIN
+      sasl.jaas.config: >
+        org.apache.kafka.common.security.plain.PlainLoginModule required
+        username='Q76HGXZN27TLI4OE'
+        password='cfltpr9hCkSFB52pFR5AH36HQkt2H8CsZYYRQMmFPX5d2NBnDYCdTfNaC97ajS7g';
+
+      session.timeout.ms: 45000
+
+
+weather :
+  api :
+    key : 4a69dd015ab2ff039b57de77576b0d95
+logging:
+  level:
+    org.springframework.data.redis: debug
+    io.lettuce.core: debug
+

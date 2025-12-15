@@ -1,0 +1,13 @@
+19:38:00.016 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+19:38:00.086 [SpringApplicationShutdownHook] DEBUG io.lettuce.core.RedisChannelHandler - closeAsync()
+19:38:00.088 [SpringApplicationShutdownHook] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0x896a9a18, /127.0.0.1:62801 -> localhost/127.0.0.1:6379, epid=0x1] closeAsync()
+19:38:00.177 [SpringApplicationShutdownHook] DEBUG io.lettuce.core.AbstractRedisClient - Initiate shutdown (0, 100, MILLISECONDS)
+19:38:00.248 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x896a9a18, /127.0.0.1:62801 -> localhost/127.0.0.1:6379, epid=0x1, chid=0x1] channelInactive()
+19:38:00.269 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0x896a9a18, /127.0.0.1:62801 -> localhost/127.0.0.1:6379, epid=0x1] deactivating endpoint handler
+19:38:00.275 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x896a9a18, /127.0.0.1:62801 -> localhost/127.0.0.1:6379, epid=0x1, chid=0x1] channelInactive() done
+19:38:00.276 [SpringApplicationShutdownHook] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Release executor io.netty.channel.nio.NioEventLoopGroup@520a4828
+19:38:00.286 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.ConnectionWatchdog - [channel=0x896a9a18, /127.0.0.1:62801 -> localhost/127.0.0.1:6379, last known addr=localhost/127.0.0.1:6379] channelInactive()
+19:38:00.287 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.ConnectionWatchdog - [channel=0x896a9a18, /127.0.0.1:62801 -> localhost/127.0.0.1:6379, last known addr=localhost/127.0.0.1:6379] Reconnect scheduling disabled
+19:38:00.287 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x896a9a18, /127.0.0.1:62801 -> localhost/127.0.0.1:6379, epid=0x1, chid=0x1] channelUnregistered()
+19:38:00.329 [SpringApplicationShutdownHook] DEBUG i.l.c.r.DefaultClientResources - Initiate shutdown (0, 2, SECONDS)
+19:38:00.408 [SpringApplicationShutdownHook] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Initiate shutdown (0, 2, SECONDS)

@@ -1,0 +1,26 @@
+#spring.application.name=journal
+#server.port=8002
+#spring.data.mongodb.uri=mongodb+srv://saurabhkoridev_db_user:Gvmx6FZ1NMjCl6eC@cluster0.6ebgesh.mongodb.net/journaldb?retryWrites=true&w=majority&tls=true&tlsInsecure=true&appName=Cluster0
+
+#spring.data.mongodb.database=journaldb
+#spring.data.mongodb.uri=mongodb://127.0.0.1:27017/journaldb
+#server.address=localhost
+#spring.data.mongodb.auto-index-creation=true
+#springdoc.swagger-ui.path=/swagger
+spring:
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/journaldb
+      database: journaldb
+      auto-index-creation: true
+
+server:
+  port: 8002
+  address: localhost
+  servlet:
+    context-path: /journal
+
+springdoc:
+  swagger-ui:
+    path: /swagger
+
